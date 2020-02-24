@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>Days Until Spring</title>
+    <style>
+        #flower{
+            background-image: url(images/flower.png);
+            height: 600px;
+            width: 100%;
+            background-repeat: no-repeat;
+        }
+        h1 {
+            position: fixed;
+            margin-top: 260px;
+        }
+        #days{
+            position: relative;
+            top: 68px;
+            left: 75px;
+            font-size: 50px;
+            font-weight: 600;
+        }
+    </style>
+    
+    <script type = "text/javascript" > 
+       function calcDate() {
+         // To set two dates to two variables 
+         var date1 = new Date(); // today's date 
+         var date2 = new Date("03/19/2020"); // spring begin date
+         var oneDay = (1000 * 3600 * 24);
+  
+         // To calculate the time difference of two dates 
+         var days_between_dates = date2.getTime() - date1.getTime(); 
+  
+         // To calculate the no. of days between two dates 
+         var days_until_spring = Math.round(days_between_dates / oneDay); 
+         return days_until_spring;
+      }
+    </script> 
+  </head>
+
+<body>
+    <div id="flower"> 
+        <span id ="days"> <script> document.write(calcDate()); </script> </span>
+        <h1> <strong>Days Until Spring 2020!</strong> </h1>
+    </div>
+</body>
+</html>
